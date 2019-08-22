@@ -3,11 +3,21 @@ MAX_SCORE = 100
 
 score = float(input("Enter score: "))
 
-if score < MIN_SCORE or score > MAX_SCORE:
-    print("Invalid Score!")
-elif score >= 90:
-    print("Excellent score!")
-elif score >= 50:
-    print("Passable score!")
-else:
-    print("Bad Score!")
+
+def score_convert(score_value):
+    """ Takes a score value and returns in terms of a grade
+    90% or higher --> Excellent score
+    50% or higher --> Passable score
+    under 50%     --> Bad Score
+    """
+    if score_value < MIN_SCORE or score_value > MAX_SCORE:
+        return "Invalid Score!"
+    elif score_value >= 90:
+        return "Excellent score!"
+    elif score_value >= 50:
+        return "Passable score!"
+    else:
+        return "Bad Score!"
+
+
+print(score_convert(score))
