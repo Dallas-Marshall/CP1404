@@ -23,10 +23,10 @@ def fahrenheit_to_celsius(temperature_fahrenheit):
 while choice != "Q":
     if choice == "C":
         celsius = float(input("Celsius: "))
-        print("Result: {:.2f} F".format(celsius_to_fahrenheit(celsius)))
+        print("Result: {:.2f} degrees fahrenheit".format(celsius_to_fahrenheit(celsius)))
     elif choice == "F":
         fahrenheit = float(input("Fahrenheit: "))
-        print("result: {:.2f}".format(fahrenheit_to_celsius(fahrenheit)))
+        print("result: {:.2f} degrees celsius".format(fahrenheit_to_celsius(fahrenheit)))
     else:
         print("Invalid option")
     print(MENU)
