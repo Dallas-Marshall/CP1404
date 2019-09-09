@@ -10,7 +10,7 @@ def main():
     word_count_keys.sort()
     for word in word_count_keys:
         count = word_to_count.get(word)
-        print("{:{}} = {}".format(word, calculate_longest_word(word_count_keys), count))
+        print("{:{}} {}".format(word + ':', calculate_longest_word(word_count_keys) + 1, count))
 
 
 def calculate_longest_word(words):
