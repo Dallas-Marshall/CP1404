@@ -8,9 +8,10 @@ def main():
             word_to_count[word] = 1
     word_count_keys = list(word_to_count.keys())
     word_count_keys.sort()
+    max_length = calculate_longest_word(word_count_keys)
     for word in word_count_keys:
         count = word_to_count.get(word)
-        print("{:{}} {}".format(word + ':', calculate_longest_word(word_count_keys) + 1, count))
+        print("{:{}}  {}".format(word + ':', max_length, count))
 
 
 def calculate_longest_word(words):
