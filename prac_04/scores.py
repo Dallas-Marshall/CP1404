@@ -14,7 +14,7 @@ def main():
     """Read and display student scores from scores file."""
     scores_file = open("scores.csv")
     scores_data = scores_file.readlines()
-    print(scores_data)
+    # print(scores_data)
     subjects = scores_data[0].strip().split(",")
     score_values = []
     for score_line in scores_data[1:]:
@@ -22,11 +22,13 @@ def main():
         score_numbers = [int(value) for value in score_strings]
         score_values.append(score_numbers)
     scores_file.close()
-    for i in range(len(subjects)):
-        print(subjects[i], "Scores:")
-        for score in score_values[i]:
+    for subject in range(len(subjects)):
+        print("{} Scores:".format(subjects[subject]))
+        for score in score_values[subject]:  # Only using the first line of scores rather than the first of each line
+            # of scores So rather than using first row need to iterate trough rows and pull out first element then save
+            # them as the scores for that class
             print(score)
-        print("Max:", max(score_values[i]))
+        print("Max:", max(score_values[subject]))
         print()
 
 
