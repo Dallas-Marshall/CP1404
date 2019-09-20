@@ -1,14 +1,14 @@
 """guitar class for prac_06 intermediate exercises."""
 
-CURRENT_YEAR = 2018
+CURRENT_YEAR = 2019
 VINTAGE_AGE = 50
 
 
 class Guitar:
-    """Represent a Guitar object."""
+    """Guitar class to represent details of a guitar."""
 
     def __init__(self, name="", year=0, cost=0.0):
-        """Initialise a Guitar instance"""
+        """Initialise a Guitar."""
         self.name = name
         self.year = year
         self.cost = cost
@@ -27,3 +27,6 @@ class Guitar:
         vintage: if guitar age is >= VINTAGE_AGE
         """
         return self.get_age() >= VINTAGE_AGE
+
+    def __lt__(self, other):
+        return self.year < other.year
