@@ -8,6 +8,8 @@ Started 13/10/2015
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
+from kivy.uix.boxlayout import BoxLayout
+import kivy.uix.gridlayout as gridl
 
 __author__ = 'Lindsay Ward'
 
