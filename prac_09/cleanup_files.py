@@ -10,10 +10,6 @@ def main():
     print("Starting directory is: {}".format(os.getcwd()))
     os.chdir('Lyrics/Christmas')
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
-    try:
-        os.mkdir('temp')
-    except FileExistsError:
-        pass
     for filename in os.listdir('.'):
         if os.path.isdir(filename):
             continue
