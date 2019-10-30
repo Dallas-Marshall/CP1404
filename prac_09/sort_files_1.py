@@ -1,4 +1,4 @@
-"""Do from scratch exercise part 1 for prac_09"""
+"""Do from scratch exercise part 1 for prac_09."""
 import os
 import shutil
 
